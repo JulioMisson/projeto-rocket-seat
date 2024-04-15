@@ -85,16 +85,9 @@ body{
        
        body{
        
-           /*
-           background-image: url(./assets/bg-mobile.jpg);
-           background-repeat: no-repeat;
-           background-position: top center;
-           background-size: cover;
-           
-           todos esses codigos estarao agora comprimidos em uma unica tag*/
-           
            background:var(--bg-url) top center/cover;
-           /* mas nem precisaria de tudo isso,apenas com o cover ja daria pra cobrir a tela inteira*/
+           height: 100vh;
+          
            }
            
            body * {
@@ -250,4 +243,14 @@ body{
                    padding: 24px 0;
                    text-align: center;
                    font-size: 14px;
+                }
+
+                @media (min-width: 700px){
+                  :root{
+                     --bg-url: url(./assets/bg-desktop.jpg)
+                  }
+
+                  .light{
+                     --bg-url: url(./assets/bg-desktop-light.jpg)
+                  }
                 }
